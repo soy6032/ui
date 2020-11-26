@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 태그의 너비, 높이의 기준을 어디에 두는가를 설정하는 속성 */
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .header{
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+        .boxa{
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+            background-color: #aaaaaa;
+        }
+        .boxb{
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            background-color: #bbbbbb;
+        }
+        .boxc{
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+            background-color: #cccccc;
+        }
+        /* ::after ->해당 태그가 그려지고 난 후 동작하는 속성 */
+        .main::after{
+            content: "";
+            display: table; /*table 대신 block 사용해도됨*/
+            /* float 속성 사용후 float 속성을 원래대로 clear해줘야함, 
+            만약 clear 하지 않을 경우 원하는 대로 UI가 표지되는 것을 보장하지 않은 */
+            /* float 속성의 clear는 float 속성을 사용한 태그가 하는것이 아니라
+            해당 태그 다음에 사용되는 태그가 해줘야 함. */
+            /* 현재는 float를 사용하는 부모 태그에서 float 속성을 clear 시키는
+            방법을 사용함. */
+            clear: both;
+        }
+        /* 미디어쿼리 : css3 버전에서 새로 도입됨 기술 */
+        /* 화면의 크기에 따라서 css 속성을 변경할 수 있는 기술 */
+
+        /* 화면의 크기가 최대 576px까지는 아래의 속성을 적용하고 그 이상은 위의 css속성을 적용 */
+        /* 576px 보다 작으면 아래의 속성 적용 */
+        @media screen and (max-width: 576px){
+            .main div{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>header</h2>
+    </div>
+    <div class="main">
+        <div class="boxa">왼쪽 사이드바</div>
+        <div class="boxb">메인 컨텐츠</div>
+        <div class="boxc">오른쪽 사이드바</div>    
+    </div>
+    <div class="footer">
+        <p>footer</p>
+    </div>
+</body>
+</html>
