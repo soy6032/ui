@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidenav</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        .contents{
+            margin-left: 200px;
+            padding-left: 20px;
+        }
+        .sidenav{
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            background-color: #444;
+        }
+        .sidenav ul{
+            margin: 8px 0;
+            padding: 0;
+        }
+        .sidenav a{
+            color: white;
+            padding: 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .sidenav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">link1</a></li>
+            <li><a href="#">link2</a></li>
+            <li><a href="#">link3</a></li>
+        </ul>
+    </div>
+
+    <div class="contents">
+        <h2>메인 컨텐츠</h2>
+        <p>메인 컨텐츠가 들어갈 자리</p>
+    </div>
+</body>
+</html>

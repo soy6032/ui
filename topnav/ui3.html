@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+            background-color: #f3f3f3;
+            padding: 50px;
+        }
+        #header h1{
+            color: black;
+            margin: 0;
+            text-align: center;
+            font-weight: normal;
+            font-size: 30pt;
+        }
+        #left-wrap{
+            width: 600px;
+            float: left;
+            margin-right: 10px;
+        }
+        main::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        #left-wrap img{
+            width: 600px;
+            height: 600px;
+        }
+        main{
+            padding: 10px;
+            width: 960px;
+            margin: 0 auto;
+        }
+        .bottom{
+            background-color:#f3f3f3;
+            width: 600px;
+            padding: 20px;
+            margin-top: 10px;
+        }
+        #right-wrap{
+            float: left;
+            width: 330px;
+        }
+        .right{
+            background-color:#f3f3f3;
+            height: 500px;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+        main h2{
+            font-size: 20pt;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Weekly Ping</h1>
+    </div>
+    <main>
+        <!-- section : 메인 컨텐츠를 구분하는 태그
+            aside : 메인 컨텐츠 중 사이드바로 사용되는 태그
+        -->
+        <div id="left-wrap">
+            <div class="left top">
+                <img src="../images/img_5terre.jpg" alt="">
+            </div>
+            <div class="left bottom">
+                <h2>Everyone knows</h2>
+                <p>Everyone knows what a tree is, but it is a
+                     classification of plants that is not strictly 
+                     defined. This is because there are many plants 
+                     that resemble trees, such as shrubs (bush trees), 
+                     bamboo, and palm trees, but with different ecology.
+                      A tree in a broad sense commonly used refers to a 
+                      plant that grows a certain height above and has a 
+                      long wooden post with leaves or stems.</p>
+            </div>
+        </div>
+        <div id="right-wrap">
+            <div  class="right">
+                <h2>Everyone knows</h2>
+                <p>Everyone knows what a tree is, but it is a
+                     classification of plants that is not strictly 
+                     defined. This is because there are many plants 
+                     that resemble trees, such as shrubs (bush trees), 
+                     bamboo, and palm trees, but with different ecology.
+                      A tree in a broad sense commonly used refers to a 
+                      plant that grows a certain height above and has a 
+                      bamboo, and palm trees, but with different ecology.
+                      A tree in a broad sense commonly used refers to a 
+                      plant that grows a certain height above and has a 
+                      A tree in a broad sense commonly used refers to a 
+                      plant that grows a certain height above and has a
+                      long wooden post with leaves or stems.</p>
+            </div>
+            <div class="right">
+                <h2>Everyone knows</h2>
+                <p>Everyone knows what a tree is, but it is a
+                     classification of plants that is not strictly 
+                     defined. This is because there are many plants 
+                     that resemble trees, such as shrubs (bush trees), 
+                     bamboo, and palm trees, but with different ecology.
+                      A tree in a broad sense commonly used refers to a 
+                      plant that grows a certain height above and has a 
+                      long wooden post with leaves or stems.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
