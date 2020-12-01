@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+            background-color: white;
+        }
+
+        #header h1 {
+            margin-left: 20px;
+        }
+
+        #header #nav {
+            background-color: green;
+            width: 100%;
+            height: 60px;
+        }
+
+        #nav ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        #nav li {
+            float: left;
+            list-style-type: none;
+            height: 60px;
+            margin-right: 20px;
+            font-size: 20px;
+            color: white;
+            padding: 16px;
+        }
+
+        #nav li:hover {
+            background-color: white;
+            color: black;
+        }
+
+        #nav::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        #right_nav {
+            background-color: white;
+            width: 250px;
+            height: 800px;
+            position: fixed;
+            top: 150px
+        }
+
+        #right_nav li {
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        #right_nav li:hover {
+            background-color: lightgray;
+        }
+
+        #right_nav ul,
+        #right_nav h3 {
+            padding: 0;
+            margin: 0;
+            padding-left: 10px;
+        }
+
+        #right_nav h3 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        #top, #bottom {
+            top: 150px;
+            position: absolute;
+            left: 250px;
+            width: 85%;
+            background-color: rgb(243, 243, 243);
+            padding: 10px;
+            margin: 20px;
+            box-shadow: 0 0 10px lightgray;
+        }
+
+        #bottom {
+            top: 650px;
+        }
+        #main{
+            width: 100%;
+            height: 1000px;
+        }
+
+
+        #main h2 {
+            font-size: 60px;
+            margin: 15px 0;
+            font-weight: normal;
+        }
+
+        #main button {
+            height: 40px;
+            border: 0;
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        #main button:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .text_box {
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            margin-left: 0;
+            border-left: 4px solid green;
+        }
+
+        #footer {
+            background-color: rgb(243, 243, 243);
+            position: absolute;
+            width: 85%;
+            height: 120px;
+            z-index: 200;
+            left: 250px;
+            margin: 20px;
+            top: 1150px;
+            box-shadow: 0 0 10px lightgray;
+            text-align: center;
+            line-height: 120px;
+            color: grey;
+            margin-bottom: 0;
+        }
+
+        h1 span {
+            color: limegreen;
+        }
+
+        #right_nav2 {
+            display: none;
+        }
+
+        #top h3,
+        #bottom h3 {
+            font-weight: 400;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id=header>
+        <h1>W3SCHOOLS<span>.COM</span></h1>
+        <!-- <h3>THE WORLD'S LARGEST WEB DEVELOPER SITE</h3> -->
+        <div id="nav">
+            <ul>
+                <li id="">TUTORIALS</li>
+                <li id="">REFERENCES</li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div id="right_nav">
+            <h3>Tutorials</h3>
+            <ul>
+                <li>Learn HTML</li>
+                <li>Learn CSS</li>
+                <li>Learn W3.CSS</li>
+                <li>Learn Colors</li>
+                <li>Learn JavaScript</li>
+                <li>Learn XML</li>
+                <li>Learn SQL</li>
+                <li>Learn PHP</li>
+            </ul>
+        </div>
+
+        <div id="main_contents">
+            <div id="top">
+                <div class="line">
+                    <h2>CSS</h2>
+                    <h3>The Language for Styling Web Pages</h3>
+                    <button>LEARN CSS</button>
+                    <button>CSS REFERENCE</button>
+                    <div class="text_box">
+                        <p>body {
+                            background-color: #d0e4fe;
+                            }</p>
+                        <p>
+                            h1 {
+                            color: orange;
+                            text-align: center;
+                            }
+                        </p>
+                        <p>
+                            p {
+                            font-family: "Times New Roman";
+                            font-size: 20px;
+                            }
+                        </p>
+                    </div>
+                    <button>Try it Yourself</button>
+                </div>
+            </div>
+            <div id="bottom">
+                <h2>JS</h2>
+                <h3>The Language for Styling Web Pages</h3>
+                <button>LEARN JS</button>
+                <button>JS REFERENCE</button>
+                <div class="text_box">
+                    <p>body {
+                        background-color: #d0e4fe;
+                        }</p>
+                    <p>
+                        h1 {
+                        color: orange;
+                        text-align: center;
+                        }
+                    </p>
+                    <p>
+                        p {
+                        font-family: "Times New Roman";
+                        font-size: 20px;
+                        }
+                    </p>
+                </div>
+                <button>Try it Yourself</button>
+
+            </div>
+            <div id="footer">
+                푸터
+            </div>
+        </div>
+
+</body>
+
+</html>
