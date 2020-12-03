@@ -1,0 +1,38 @@
+.flex-container{
+    display: flex;
+    background-color: violet;
+    margin-bottom: 15px;
+
+}
+#div03 .card1{
+    flex-direction: column;
+}
+#div03 .card2{
+    flex-direction: column-reverse;
+}
+#div03 .card3{
+    flex-direction: row;
+}
+#div03 .card4{
+    flex-direction: row-reverse;
+}
+
+.flex-container > div{
+    background-color: lightgray;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 75px;
+}
+
+
+#div04 .wrap{
+    flex-wrap: wrap;
+}
+#div04 .wrap-reverse{
+    flex-wrap: wrap-reverse;
+}
+#div04 .nowrap{
+    flex-wrap: nowrap;
+}
