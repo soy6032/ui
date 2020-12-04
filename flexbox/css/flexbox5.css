@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+/* font-family: 'Nanum Myeongjo', serif;
+font-family: 'Noto Sans KR', sans-serif; */
+body{
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+header{
+    padding: 60px;
+    text-align: center;
+    background-color: #1abc9c;
+    color: white;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    background-color: #333333;
+}
+
+nav li > a{
+    display: block;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li > a:hover{
+    background-color: #dddddd;
+    color: black;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #dddddd;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white
+}
+
+aside{
+    background-color: #f1f1f1;
+    padding: 20px;
+    flex: 30%;
+}
+
+section{
+    padding: 20px;
+    flex: 70%;
+}
+
+.fake-img{
+    background-color: #aaaaaa;
+    width: 100%;
+    padding: 30px;
+}
+
+.photo-me{
+    height: 200px;
+}
+
+.photo-link{
+    height: 60px;
+}
+
+.photo-post{
+    height: 200px;
+}
+
+article{
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+@media all and (max-width: 576px){
+    main, nav ul{
+        flex-direction: column;
+        /* float사용시 main의 자손 태그인 aside, section의
+        width를 100%로 변경 */
+    }
+}
+
+/*문제1) flex box를 사용하여 만들어진 현재 사이트를 float을 사용하는
+방식으로 하여 작성하시요 */

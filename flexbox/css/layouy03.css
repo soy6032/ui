@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url(falls2.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    margin: 10px;
+    font-weight: 200;
+}
+main{
+    position: relative;
+}
+#comming{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+main h1{
+    color: white;
+    text-align: center;
+    margin-top: 200px;
+    font-weight: 400;
+    font-size: 50px;
+    padding: 0;
+    margin-bottom: 15px;
+
+}
+#wrap{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    margin: 0 auto;
+    border-top: 1px solid white;
+    margin-top: 420px;
+}
+
+#wrap p{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+
+

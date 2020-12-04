@@ -1,0 +1,38 @@
+*{box-sizing: border-box;}
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    padding: 30px;
+    text-align: center;
+    color: black;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+article{
+    flex: 25%;
+}
+article img{
+    width: 100%;
+    padding: 3px 5px;
+}
+
+@media all and (max-width:996px){
+    article{
+        flex: 33.33%;
+    }
+}
+@media all and (max-width:768px){
+    article{
+        flex: 50%;
+    }
+}
+@media all and (max-width:567px){
+    article{
+        flex: 100%;
+    }
+}

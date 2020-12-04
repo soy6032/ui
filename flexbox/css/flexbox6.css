@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+/* font-family: 'Nanum Myeongjo', serif;
+font-family: 'Noto Sans KR', sans-serif; */
+body{
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;    
+}
+
+
+
+header{
+    padding: 60px;
+    text-align: center;
+    background-color: #1abc9c;
+    color: white;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    background-color: #333333;
+}
+
+nav::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav li{
+    float: left;
+}
+
+nav li > a{
+    display: block;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li > a:hover{
+    background-color: #dddddd;
+    color: black;
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+    background-color: #dddddd;
+}
+
+main{
+    height: 100%;
+    background-color: #f1f1f1;
+}
+
+aside{
+    float: left;
+    width: 30%;
+    height: 100%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+section{
+    width: 70%;
+    float: right;
+    padding: 20px;
+    background-color: white;
+    
+}
+main::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.fake-img{
+    background-color: #aaaaaa;
+    width: 100%;
+    padding: 30px;
+}
+
+.photo-me{
+    height: 200px;
+}
+
+.photo-link{
+    height: 60px;
+}
+
+.photo-post{
+    height: 200px;
+}
+
+article{
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+@media all and (max-width: 576px){
+    aside, section, nav li{
+        width: 100%;
+    }
+}

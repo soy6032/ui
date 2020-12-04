@@ -1,0 +1,30 @@
+*{box-sizing: border-box;}
+
+.left{
+    background-color: coral;
+    padding: 10px;
+    flex: 33.33%;
+}
+.center{
+    background-color: cornflowerblue;
+    padding: 10px;
+    flex: 33.33%;
+}
+.right{
+    background-color: darkcyan;
+    padding: 10px;
+    flex: 33.33%;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    font-size: 32px;
+    text-align: center;
+}
+
+/* 567px, 768px, 996px, 1200px 를 기준으로 나눔 */
+@media screen and (max-width:768px){
+    .flex-container{
+        flex-direction: column;
+    }
+}

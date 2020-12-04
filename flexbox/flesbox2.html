@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/flexbox2.css">
+</head>
+<body>
+    <div id="div01">
+        <h3>order 미사용</h3>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <h3>oeder 사용</h3>
+        <div class="flex-container order"> 
+            <div style="order: 3;">1</div>
+            <div style="order: 2;">2</div>
+            <div style="order: 4;">3</div>
+            <div style="order: 1;">4</div>
+        </div>
+    </div>
+    <br><hr><br>
+    <div id="div02">
+        <h3>flex-glow 사용</h3>
+        <div class="flex-container grow">
+            <div style="flex-grow: 1;">1</div>
+            <div style="flex-grow: 1;">2</div>
+            <div style="flex-grow: 5;">3</div>
+        </div>
+    </div>
+    <br><hr><br>
+    <div id="div03">
+        <h3>flex-shrink 사용</h3>
+        <div class="flex-container shrink">
+           <div>1</div>
+           <div>2</div>
+           <div style="flex-shrink: 0;">3</div>
+           <div>4</div>
+           <div>5</div>
+           <div>6</div>
+           <div>7</div>
+           <div>8</div>
+           <div>9</div>
+           <div>10</div>
+        </div>
+    </div>
+    <br><hr><br>
+    <div id="div04">
+        <h3>flex-basis 사용</h3>
+        <div class="flex-container basis">
+            <div>1</div>
+            <div style="flex-basis: 200px;">2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <br><hr><br>
+    <div id="div05">
+        <h3>flex 사용</h3>
+        <div class="flex-container flex">
+            <div>1</div>
+            <div style="flex:0 0 200px;">2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+    </div>
+    <br><hr><br>
+    <div id="div06">
+        <h3>aling-self 사용</h3>
+        <div class="flex-container self">
+            <div>1</div>
+            <div style="align-self: flex-start;">2</div>
+            <div style="align-self: center;">3</div>
+            <div style="align-self: flex-end;">4</div>
+            <div>5</div>
+        </div>
+    </div>
+</body>
+</html>

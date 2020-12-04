@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 박스 사용하기</title>
+
+    <style>
+        .box {
+            width: 100px;
+            padding: 20px 0px;
+            margin: 10px;
+            text-align: center;
+            font-size: 32px;
+            background-color: lightgray;
+        }
+
+        #div01 { background-color: dodgerblue; }
+        #div02 {
+            background-color: dodgerblue;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    </style>
+
+    <link rel="stylesheet" href="./css/flexbox1.css">
+
+</head>
+<body>
+    <h3>기본값</h3>
+    <div id="div01">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>
+
+    <br><hr><br>
+
+    <h3>flexbox 사용</h3>
+    <div id="div02">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div03">
+        <h3>flex-direction : column</h3>
+        <div class="flex-container card1">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>flex-direction : column-reverse</h3>
+        <div class="flex-container card2">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>flex-direction : row(float : left 와 비슷)</h3>
+        <div class="flex-container card3">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>flex-direction : row-reverse(float : right와 비슷)</h3>
+        <div class="flex-container card4">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div04">
+        <h3>flex-wrap : wrap</h3>
+        <div class="flex-container wrap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <h3>flex-wrap : wrap-reverse</h3>
+        <div class="flex-container wrap-reverse">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+
+        <h3>flex-wrap : nowrap</h3>
+        <div class="flex-container nowrap">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div05">
+        <h3>flex-flow : row wrap</h3>
+        <div class="flex-container flex-flow">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+    <h2>flex 정렬</h2>
+    <br><hr><br>
+
+    <div id="div06">
+        <h3>justify-content : center</h3>
+        <div class="flex-container center">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>justify-content : flex-start</h3>
+        <div class="flex-container flex-start">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>justify-content : flex-end</h3>
+        <div class="flex-container flex-end">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>justify-content : space-around</h3>
+        <div class="flex-container space-around">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+        <h3>justify-content : space-between</h3>
+        <div class="flex-container space-between">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div id="div07">
+        <h3>align-item : center</h3>
+        <div class="flex-container2 vertical-center">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>align-item : flex-start</h3>
+        <div class="flex-container2 vertical-start">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>align-item : flex-end</h3>
+        <div class="flex-container2 vertical-end">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>align-item : stretch</h3>
+        <div class="flex-container2 stretch">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>align-item : baseline</h3>
+        <div class="flex-container2 baseline">
+            <div><h1>1</h1></div>
+            <div><h6>2</h6></div>
+            <div><h4>3</h4></div>
+            <div><small>4</small></div>
+        </div>
+    </div>
+
+    <br><hr><br>
+    <div id="div08">
+        <h3>align-content : space-between</h3>
+        <div class="flex-container3 space-between">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <h3>align-content : space-around</h3>
+        <div class="flex-container3 space-around">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <h3>align-content : stretch</h3>
+        <div class="flex-container3 space-stretch">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <h3>align-content : space-center</h3>
+        <div class="flex-container3 space-center">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <h3>align-content : flex-start</h3>
+        <div class="flex-container3 flex-start">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+        <h3>align-content : flex-end</h3>
+        <div class="flex-container3 flex-end">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
