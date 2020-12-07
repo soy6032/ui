@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: whitesmoke;
+        }
+        .timeline{
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* ::after, ::before 가상클래스 */
+        /* ::before : 지정한 태그의 앞아서 동작 */
+        /*  ::after : 지정한 태그의 뒤에서 동작 */
+        .timeline::after{
+            content: "";
+            position: absolute;
+            width: 6px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .container{
+            padding: 10px 40px;
+            position: relative;
+            background: inherit;
+            width: 50%;
+        }
+        .container::after{
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            top: 15px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #ff9f55;
+            z-index: 100;
+        }
+        .left{
+            left: 0;
+        }
+        .right{
+            left: 50%;
+        }
+        .left::before{
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 22px;
+            right: 30px;
+            z-index: 100;
+            border: medium solid white;
+            border-width: 10px 0px 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+        .right::before{
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 22px;
+            left: 30px;
+            z-index: 100;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0px;
+            border-color: transparent white transparent transparent ;
+        }
+        .right::after{
+            left: -16px;
+        }
+        .content{
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h2>2020</h2>
+                <p>
+                    있는 노래하며 없는 것은 이 든 공자는 뿐이다. 
+                    사는가 아름답고 그것을 찾아 얼음과 있는 천자만홍이 
+                    약동하다. 무엇을 이상은 그들에게 따뜻한 더운지라
+                    귀는 못할 이 것이다.
+                    있는 노래하며 없는 것은 이 든 공자는 뿐이다. 
+                    사는가 아름답고 그것을 찾아 얼음과 있는 천자만홍이 
+                    약동하다. 무엇을 이상은 그들에게 따뜻한 더운지라
+                    귀는 못할 이 것이다.
+                </p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2019</h2>
+                <p>
+                    위하여 옷을 뛰노는 그들을 온갖 놀이 이상의 것이다. 
+                    대한 희망의 인간의 그것을 품에 것이다. 
+                </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2018</h2>
+                <p>
+                    만천하의 놀이 있는 황금시대를 심장은 든 얼마나 이것은 것이다. 
+                    내는 더운지라 인도하겠다는 피가 그들의 인생의 봄바람이다. 
+                </p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h2>2017</h2>
+                <p>
+                    자신과 관현악이며, 살 청춘의 가는 청춘 돋고, 교향악이다. 
+                    청춘을 못할 그들의 사는가 피고,
+                    이상을 쓸쓸하랴? 밥을 앞이 때까지 같지 것이다.
+                </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h2>2016</h2>
+                <p>
+                    그러므로 실로 생생하며, 사람은 두기 하여도 철환하였는가? 
+                    얼마나 얼음이 살았으며, 이상의 가치를 심장의 이상은 얼음 운다.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

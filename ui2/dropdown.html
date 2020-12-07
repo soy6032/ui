@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .drop-menu{
+            background-color: cadetblue;
+            color: white;
+            padding: 19px;
+            font-size: 1rem;
+            border: none;
+        }
+        .dropdown{
+            position: relative;
+            /* position: absolute를 사용하려면 부모 태그에서 position: relative
+            를 반드시 사용해야함 */
+            display: inline-block;
+            /* dropdown 버튼을 사용하기 위한 영역인 div가 display:block
+            이므로 버튼처럼 사용하기 위해서 inline-block으로 변경 */
+        }
+            /* dropdown 버튼에 마우스가 올라갔을 경우 화면에 표시되는 메뉴 */
+        .dropdown-item{
+            display: none;
+            /* 평상시에 화면에 출력하지 않기 위해서 display:none */
+            position: absolute;
+            background-color: rgb(231, 231, 231);
+            min-width: 160px;
+            /* 출력되느 메뉴의 최소 크기 설정 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+        .dropdown-item a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            /* a태그는 display:inline 이므로 block으로 변경하여 
+            세로형 메뉴로 보이도록 함 */
+        }
+        /* 출력된 dropdown메뉴에서 마우스 포인터가 어디에 있는지 표지하기
+        위한 설정 */
+        .dropdown-item a:hover{
+            background-color: cornflowerblue;
+        }
+        /* dorpdown 메누의 가장 조산 태그에 hover 옵션을 사용하여 마우스
+        포인터가 dropdown 메뉴 전체 어디에 존재해도 dropdown 메뉴가 표시되도록 함 */
+        .dropdown:hover .dropdown-item{display: block;}
+        .dropdown:hover .drop-menu{background-color: green;}
+
+    </style>
+</head>
+<body>
+    <h3>드랍다운 버튼 만들기</h3>
+    <div class="dropdown">
+        <button class="drop-menu">Dropdown button</button>
+        <div class="dropdown-item">
+            <a href="#">링크1</a>
+            <a href="#">링크2</a>
+            <a href="#">링크3</a>
+        </div>
+    </div>
+</body>
+</html>

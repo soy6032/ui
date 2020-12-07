@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown 메뉴를 사용한 네비게이션바</title>
+    <style>
+        .navbar{
+            overflow: hidden;
+            background-color: #333333;
+        }
+        .navbar ul::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .navbar ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar li{
+            float: left;
+        }
+        .navbar a{
+            display: inline-block;
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            padding: 16px;
+        }
+        .navbar li a:hover, .dropdown:hover .dropdown-menu{
+            background-color: royalblue;
+        }
+        .dropdown{
+            overflow: hidden;
+        }
+        .dropdown .dropdown-menu{
+            font-size: 16px;
+            border: none;
+            color: white;
+            padding: 16px;
+            margin: 0;
+            background-color: #333333;
+            /* background-color:inherit :부모태그로 부터 해당 속성값을 상속 */
+        }
+        .dropdown-item{
+            display: none;
+            position: absolute;
+            background-color: lightgray;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+        .dropdown-item a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-item a:hover{
+            background-color: darkcyan;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-item{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">링크1</a></li>
+            <li><a href="#">링크2</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropdown-menu">드랍다운</button>
+                    <div class="dropdown-item">
+                        <a href="#">링크 3-1</a>
+                        <a href="#">링크 3-2</a>
+                        <a href="#">링크 3-3</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

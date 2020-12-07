@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>측면에서 출력되는 메뉴</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="jquery-3.5.1.js"></script>
+    <style>
+        .sidebar{
+            height: 100%;
+            width: 0px;
+            position: fixed;
+            z-index: 100;
+            top: 0;
+            left: 0;
+            background-color: #111111;
+            overflow: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a{
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: lightgrey;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover{
+            color: royalblue;
+        }
+        .sidebar .btn-close{
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .btn-open{
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111111;
+            color: white;
+            padding: 16px;
+            border: none;
+        }
+        .btn-open:hover{
+            background-color: #444444;
+        }
+        #main{
+            transition: margin-left 0.5s;
+            padding: 16px;
+        }
+
+        
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#btnOpen").on("click",function(){
+                $("#mySidebar").css("width", "250px");
+                $("#main").css("marginLeft", "250px");
+            });
+            $("#btnClose").on("click",function(){
+                $("#mySidebar").css("width", "0px");
+                $("#main").css("marginLeft", "0px");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a class="btn-close" id="btnClose">
+            <i class="fa fa-close"></i>
+        </a>
+        <a href="#">link 1</a>
+        <a href="#">link 2</a>
+        <a href="#">link 3</a>
+        <a href="#">link 4</a>
+    </div>
+
+    <div id="main">
+        <button class="btn-open" id="btnOpen">open sidebar</button>
+    </div>
+</body>
+</html>
